@@ -29,4 +29,9 @@ streamlit.dataframe(fruits_to_show)
 # New Section to show contents from fruityvice website...
 streamlit.header("Fruityvice Fruit Advice!")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json())
+# streamlit.text(fruityvice_response.json())
+
+# Converts the JSON from the response into a dataframe in table format...
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# The dataframe from above step is display on the screen...
+streamlit.dataframe(fruityvice_normalized)
