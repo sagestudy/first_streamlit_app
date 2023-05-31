@@ -72,6 +72,6 @@ if not fruit_list_add:
     streamlit.write("Input cannot be empty...")
 else:
     # my_data_rows.extend(fruit_list_add)
-    my_data_rows.loc[len(my_data_rows.index)] = [fruit_list_add] 
+    my_data_rows.loc[len(my_data_rows.index)] = list(fruit_list_add)
 # streamlit.write(my_data_rows)
 streamlit.dataframe(my_data_rows)
