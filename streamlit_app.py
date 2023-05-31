@@ -64,14 +64,17 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-# streamlit.write(type(my_data_rows))
-fruit_list_add = streamlit.text_input(
-    "What fruit would you like to add?", "")
-# streamlit.write(type(fruit_list_add))
-if not fruit_list_add:
-    streamlit.write("Input cannot be empty...")
-else:
-    # my_data_rows.extend(fruit_list_add)
-    my_data_rows.loc[len(my_data_rows.index)] = list(fruit_list_add)
-# streamlit.write(my_data_rows)
-streamlit.dataframe(my_data_rows)
+# # streamlit.write(type(my_data_rows))
+# fruit_list_add = streamlit.text_input(
+#     "What fruit would you like to add?", "")
+# # streamlit.write(type(fruit_list_add))
+# if not fruit_list_add:
+#     streamlit.write("Input cannot be empty...")
+# else:
+#     # my_data_rows.extend(fruit_list_add)
+#     my_data_rows.loc[len(my_data_rows.index)] = list(fruit_list_add)
+# # streamlit.write(my_data_rows)
+# streamlit.dataframe(my_data_rows)
+
+streamlit.text("my_data_rows": my_data_rows)
+streamlit.text("fruit_list_add": fruit_list_add)
