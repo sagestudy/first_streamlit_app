@@ -71,6 +71,6 @@ fruit_list_add = streamlit.text_input(
 if not fruit_list_add:
     streamlit.write("Input cannot be empty...")
 else:
-    my_data_rows.append(fruit_list_add)
-streamlit.write(my_data_rows)
-# streamlit.dataframe(my_data_rows)
+    my_data_rows.append(list(fruit_list_add))
+# streamlit.write(my_data_rows)
+streamlit.dataframe(my_data_rows)
