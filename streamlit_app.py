@@ -76,5 +76,5 @@ streamlit.dataframe(my_data_rows)
 # # streamlit.write(my_data_rows)
 # streamlit.dataframe(my_data_rows)
 
-streamlit.text("my_data_rows": my_data_rows)
-streamlit.text("fruit_list_add": fruit_list_add)
+streamlit.text(f"my_data_rows: {my_data_rows}")
+streamlit.text(f"fruit_list_add: {fruit_list_add}")
