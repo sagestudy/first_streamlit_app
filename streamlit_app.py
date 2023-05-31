@@ -71,9 +71,10 @@ fruit_list_add = streamlit.text_input(
 if not fruit_list_add:
     streamlit.write("Input cannot be empty...")
 else:
-    my_data_rows.extend((fruit_list_add, ))
+    # my_data_rows.extend((fruit_list_add, ))
+    streamlit.write(f"Thanks for adding {fruit_list_add}")
 # streamlit.write(my_data_rows)
-streamlit.dataframe(my_data_rows)
+# streamlit.dataframe(my_data_rows)
 
 # streamlit.text(f"my_data_rows: {my_data_rows}")
 # streamlit.text(f"fruit_list_add: {fruit_list_add}")
